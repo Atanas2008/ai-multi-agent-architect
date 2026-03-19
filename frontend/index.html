@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StratAI — AI Multi-Agent Business Advisor</title>
+  <meta name="description" content="Enterprise-grade AI advisory system powered by three specialised AI agents working in concert to analyse, strategise, and refine your business challenges." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     NAV
+════════════════════════════════════════════════════════════════════════════ -->
+<nav class="nav">
+  <div class="container nav__inner">
+    <div class="nav__logo">
+      <div class="nav__logo-icon">🧠</div>
+      <span>StratAI</span>
+    </div>
+    <nav class="nav__links">
+      <a href="#how-it-works">How It Works</a>
+      <a href="#agents">Agents</a>
+      <a href="#pipeline">Demo</a>
+      <a href="#architecture">Architecture</a>
+    </nav>
+    <a href="#pipeline" class="nav__cta">Try It Free →</a>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero__glow"></div>
+  <div class="container">
+    <div class="hero__eyebrow">
+      <span class="badge">🚀 AI-Powered Strategy Platform</span>
+    </div>
+    <h1 class="hero__title">
+      Three AI Agents.<br>
+      <span class="gradient-text">One Strategic Answer.</span>
+    </h1>
+    <p class="hero__sub">
+      StratAI orchestrates a pipeline of specialised AI agents to analyse your business
+      challenge, generate expert-grade recommendations, and refine them to executive standard
+      — in seconds.
+    </p>
+    <div class="hero__actions">
+      <button class="btn btn--primary" id="demo-cta-btn">🎯 Try the Demo</button>
+      <a href="#agents" class="btn btn--outline">Learn About the Agents</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     STATS
+════════════════════════════════════════════════════════════════════════════ -->
+<section class="stats">
+  <div class="container">
+    <div class="stats__grid">
+      <div>
+        <div class="stats__value gradient-text">3</div>
+        <div class="stats__label">Specialised AI Agents</div>
+      </div>
+      <div>
+        <div class="stats__value gradient-text">&lt;5s</div>
+        <div class="stats__label">Avg. Pipeline Time</div>
+      </div>
+      <div>
+        <div class="stats__value gradient-text">8+</div>
+        <div class="stats__label">Business Domains</div>
+      </div>
+      <div>
+        <div class="stats__value gradient-text">9/10</div>
+        <div class="stats__label">Avg. Quality Score</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════════════════════════════════════════ -->
+<section id="how-it-works" class="section">
+  <div class="container">
+    <div class="section__header">
+      <div class="section__eyebrow"><span class="badge">User Flow</span></div>
+      <h2 class="section__title">From Challenge to Strategy in 4 Steps</h2>
+      <p class="section__sub">A transparent, auditable AI pipeline that shows every step of the reasoning process.</p>
+    </div>
+    <div class="flow-grid">
+      <div class="flow-step">
+        <div class="flow-step__num">1</div>
+        <div class="flow-step__title">You Describe the Problem</div>
+        <p class="flow-step__desc">Submit your business challenge in plain English — no templates, no forms.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-step__num">2</div>
+        <div class="flow-step__title">Agent 1 Classifies</div>
+        <p class="flow-step__desc">The Analyzer extracts domain, intent, urgency, and key entities.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-step__num">3</div>
+        <div class="flow-step__title">Agent 2 Strategises</div>
+        <p class="flow-step__desc">The Processor generates a full strategic response with roadmap and KPIs.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-step__num">4</div>
+        <div class="flow-step__title">Agent 3 Refines</div>
+        <p class="flow-step__desc">The Refiner polishes, validates, and adds immediate next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     AGENTS
+════════════════════════════════════════════════════════════════════════════ -->
+<section id="agents" class="section" style="background:var(--bg-card); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="section__header">
+      <div class="section__eyebrow"><span class="badge">Agent Architecture</span></div>
+      <h2 class="section__title">Three Agents. Three Responsibilities.</h2>
+      <p class="section__sub">Each agent has a single, well-defined role — separation of concerns at the AI layer.</p>
+    </div>
+    <div class="arch-grid">
+
+      <!-- Agent 1 -->
+      <div class="arch-card arch-card--1">
+        <div class="arch-card__icon">🔍</div>
+        <div class="arch-card__label">Agent 1</div>
+        <h3 class="arch-card__title">Input Analyzer &amp; Classifier</h3>
+        <p class="arch-card__desc">
+          Parses raw user input, classifies the business domain and intent,
+          detects urgency and complexity, and extracts key entities and constraints.
+          Produces a structured JSON context for the pipeline.
+        </p>
+        <div class="arch-card__tags">
+          <span class="arch-card__tag">NLU</span>
+          <span class="arch-card__tag">Classification</span>
+          <span class="arch-card__tag">Entity Extraction</span>
+          <span class="arch-card__tag">JSON Output</span>
+        </div>
+      </div>
+
+      <div class="arch-arrow">→</div>
+
+      <!-- Agent 2 -->
+      <div class="arch-card arch-card--2">
+        <div class="arch-card__icon">⚙️</div>
+        <div class="arch-card__label">Agent 2</div>
+        <h3 class="arch-card__title">Core Processor &amp; Strategist</h3>
+        <p class="arch-card__desc">
+          Consumes the structured context and generates a comprehensive strategic
+          response: executive summary, actionable recommendations, phased roadmap,
+          KPI targets, and risk considerations.
+        </p>
+        <div class="arch-card__tags">
+          <span class="arch-card__tag">Strategy Generation</span>
+          <span class="arch-card__tag">Roadmap</span>
+          <span class="arch-card__tag">KPI Design</span>
+          <span class="arch-card__tag">Risk Analysis</span>
+        </div>
+      </div>
+
+      <div class="arch-arrow">→</div>
+
+      <!-- Agent 3 -->
+      <div class="arch-card arch-card--3">
+        <div class="arch-card__icon">✅</div>
+        <div class="arch-card__label">Agent 3</div>
+        <h3 class="arch-card__title">Validator, Optimiser &amp; Refiner</h3>
+        <p class="arch-card__desc">
+          Reviews the draft for completeness and coherence, sharpens language
+          for executive audiences, appends a concrete 7-day action plan, and
+          assigns a quality score.
+        </p>
+        <div class="arch-card__tags">
+          <span class="arch-card__tag">QA</span>
+          <span class="arch-card__tag">Language Optimisation</span>
+          <span class="arch-card__tag">Next Steps</span>
+          <span class="arch-card__tag">Scoring</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     PIPELINE DEMO
+════════════════════════════════════════════════════════════════════════════ -->
+<section id="pipeline" class="section pipeline">
+  <div class="container">
+    <div class="section__header">
+      <div class="section__eyebrow"><span class="badge">Interactive Demo</span></div>
+      <h2 class="section__title">Run the Pipeline</h2>
+      <p class="section__sub">Describe any business challenge and watch all three agents work in real time.</p>
+    </div>
+
+    <!-- Input -->
+    <div class="query-box">
+      <div class="query-box__label">
+        💬 Your Business Challenge
+      </div>
+      <textarea
+        id="query-textarea"
+        class="query-box__textarea"
+        placeholder="e.g. We are a mid-size e-commerce company struggling with 40% cart abandonment. Our customer acquisition cost has doubled in the last quarter and we need a strategy to improve conversion and retain existing customers cost-effectively."
+        maxlength="2000"
+      ></textarea>
+      <div class="query-box__footer">
+        <div>
+          <span class="query-box__hint">💡 Try a sample: </span>
+          <button class="btn btn--ghost btn--sm" data-sample="Our SaaS startup has a 25% monthly churn rate and we need a strategy to improve customer retention and reduce churn within the next 90 days.">SaaS Churn</button>
+          <button class="btn btn--ghost btn--sm" data-sample="We want to expand our retail operations into three new European markets. What should our market entry strategy look like?">Market Entry</button>
+          <button class="btn btn--ghost btn--sm" data-sample="Our engineering team has doubled in size but our deployment frequency has dropped. How do we scale our development process without sacrificing quality?">Engineering Scale</button>
+        </div>
+        <span class="char-count" id="char-count">0/2000</span>
+      </div>
+    </div>
+
+    <!-- Pipeline Steps -->
+    <div class="pipeline-steps">
+      <div class="step-card" data-step="0">
+        <div class="step-icon">🔍</div>
+        <div class="step-info">
+          <div class="step-info__name">Agent 1</div>
+          <div class="step-info__title">Input Analyzer</div>
+          <div class="step-info__status">Waiting…</div>
+        </div>
+      </div>
+      <div class="step-card" data-step="1">
+        <div class="step-icon">⚙️</div>
+        <div class="step-info">
+          <div class="step-info__name">Agent 2</div>
+          <div class="step-info__title">Strategy Generator</div>
+          <div class="step-info__status">Waiting…</div>
+        </div>
+      </div>
+      <div class="step-card" data-step="2">
+        <div class="step-icon">✅</div>
+        <div class="step-info">
+          <div class="step-info__name">Agent 3</div>
+          <div class="step-info__title">Output Refiner</div>
+          <div class="step-info__status">Waiting…</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-bottom:2rem;">
+      <button id="submit-btn" class="btn btn--primary">🚀 Run Pipeline</button>
+      <span style="margin:0 .75rem; color:var(--text-muted); font-size:.85rem;">or press Ctrl+Enter</span>
+    </div>
+
+    <!-- Context Panel (Agent 1 output) -->
+    <div id="context-panel" class="context-panel">
+      <div class="context-panel__title">🔍 Agent 1 Classification Output</div>
+      <div class="context-tags" id="context-tags"></div>
+      <p id="context-summary" style="margin-top:.75rem; font-size:.875rem; color:var(--text-muted);"></p>
+    </div>
+
+    <!-- Result Panel (Agent 3 output) -->
+    <div id="result-panel" class="result-panel">
+      <div class="result-header">
+        <div class="result-header__title">📋 Strategic Advisory Report</div>
+        <div class="result-meta">
+          <div class="result-score" id="result-score">Quality Score: —</div>
+          <div class="result-mode" id="result-mode"></div>
+        </div>
+      </div>
+      <div class="result-content" id="result-content"></div>
+      <div class="result-actions">
+        <button class="btn btn--ghost btn--sm" id="copy-btn">📋 Copy Report</button>
+        <button class="btn btn--ghost btn--sm" id="reset-btn">🔄 New Query</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     ARCHITECTURE DIAGRAM
+════════════════════════════════════════════════════════════════════════════ -->
+<section id="architecture" class="section">
+  <div class="container">
+    <div class="section__header">
+      <div class="section__eyebrow"><span class="badge">System Architecture</span></div>
+      <h2 class="section__title">Technical Overview</h2>
+      <p class="section__sub">A modular, orchestrated multi-agent backend built for clarity and extensibility.</p>
+    </div>
+
+    <div class="diagram-wrap">
+      <pre class="diagram">
+<span class="hl">┌─────────────────────────────────────────────────────────────────────┐</span>
+<span class="hl">│                        StratAI Platform                             │</span>
+<span class="hl">└─────────────────────────────────────────────────────────────────────┘</span>
+
+  <span class="hl2">┌───────────────┐</span>      HTTP POST /api/analyze
+  <span class="hl2">│   Browser     │</span>  ──────────────────────────────►  <span class="hl">┌──────────────┐</span>
+  <span class="hl2">│  (HTML/CSS/JS)│</span>  ◄──────────────────────────────  <span class="hl">│  Flask API   │</span>
+  <span class="hl2">└───────────────┘</span>      JSON Response                <span class="hl">└──────┬───────┘</span>
+                                                             │
+                                                             ▼
+                                               <span class="hl3">┌──────────────────────┐</span>
+                                               <span class="hl3">│    Orchestrator      │</span>
+                                               <span class="hl3">│  (pipeline.run())    │</span>
+                                               <span class="hl3">└──┬──────┬──────┬─────┘</span>
+                                                  │      │      │
+                          ┌───────────────────────┘      │      └────────────────────────┐
+                          ▼                              ▼                               ▼
+               <span class="hl">┌──────────────────┐</span>    <span class="hl2">┌──────────────────┐</span>    <span class="hl3">┌──────────────────────┐</span>
+               <span class="hl">│    Agent 1       │</span>    <span class="hl2">│    Agent 2       │</span>    <span class="hl3">│      Agent 3         │</span>
+               <span class="hl">│   Analyzer       │───►<span class="hl2">│   Processor      │───►<span class="hl3">│      Refiner         │</span></span>
+               <span class="hl">│                  │</span>    <span class="hl2">│                  │</span>    <span class="hl3">│                      │</span>
+               <span class="hl">│ • Parse input    │</span>    <span class="hl2">│ • Exec summary   │</span>    <span class="hl3">│ • Validate draft     │</span>
+               <span class="hl">│ • Classify domain│</span>    <span class="hl2">│ • Recommendations│</span>    <span class="hl3">│ • Optimise language  │</span>
+               <span class="hl">│ • Detect intent  │</span>    <span class="hl2">│ • Roadmap phases │</span>    <span class="hl3">│ • Add next steps     │</span>
+               <span class="hl">│ • Extract entities│</span>   <span class="hl2">│ • KPI targets    │</span>    <span class="hl3">│ • Quality score      │</span>
+               <span class="hl">│ • JSON context ↓ │</span>    <span class="hl2">│ • Risk analysis  │</span>    <span class="hl3">│ • Final output ↓     │</span>
+               <span class="hl">└──────────────────┘</span>    <span class="hl2">└──────────────────┘</span>    <span class="hl3">└──────────────────────┘</span>
+
+  <span class="hl4">Stack:  Python 3.11 · Flask 3 · OpenAI API (GPT-4o-mini) · HTML/CSS/JS (Vanilla)</span>
+  <span class="hl4">Design: Modular agents · Orchestration layer · REST API · Graceful mock fallback</span>
+      </pre>
+    </div>
+
+    <!-- Python pseudo-code -->
+    <div style="margin-top:2rem;">
+      <div class="section__header" style="margin-bottom:1.5rem; text-align:left;">
+        <h3 style="font-size:1.1rem; color:var(--text);">Python Orchestration Pseudo-code</h3>
+      </div>
+      <div class="diagram-wrap">
+        <pre class="diagram"><span class="hl"># orchestrator.py</span>
+<span class="hl2">class</span> Orchestrator:
+    <span class="hl2">def</span> <span class="hl3">run</span>(self, user_input: str) -> dict:
+
+        <span class="hl"># ── Agent 1: Classify ─────────────────────────────────────</span>
+        context = self.agent1.analyze(user_input)
+        <span class="hl4"># Returns: {domain, intent, urgency, complexity, entities, …}</span>
+
+        <span class="hl"># ── Agent 2: Generate Strategy ────────────────────────────</span>
+        draft   = self.agent2.process(context, user_input)
+        <span class="hl4"># Returns: Markdown — exec summary, roadmap, KPIs, risks</span>
+
+        <span class="hl"># ── Agent 3: Validate &amp; Refine ───────────────────────────</span>
+        refined = self.agent3.refine(draft, context)
+        <span class="hl4"># Returns: {content: polished Markdown, quality_score: int}</span>
+
+        <span class="hl2">return</span> {
+            <span class="hl3">"context"</span>:       context,
+            <span class="hl3">"final_output"</span>:  refined[<span class="hl3">"content"</span>],
+            <span class="hl3">"quality_score"</span>: refined[<span class="hl3">"quality_score"</span>],
+        }</pre>
+      </div>
+    </div>
+
+    <!-- Agent prompts -->
+    <div style="margin-top:2rem;">
+      <div class="section__header" style="margin-bottom:1.5rem; text-align:left;">
+        <h3 style="font-size:1.1rem; color:var(--text);">Example System Prompts</h3>
+      </div>
+      <div class="arch-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <div class="arch-card arch-card--1">
+          <div class="arch-card__label">Agent 1 Prompt</div>
+          <p style="font-size:.82rem; color:var(--text-muted); font-family:'Fira Code',monospace; line-height:1.7;">
+            "You are a senior business analyst AI. Analyse the user's business challenge and produce a
+            structured JSON object with domain, intent, urgency, complexity, key entities, constraints,
+            and a one-sentence summary. Respond with JSON only."
+          </p>
+        </div>
+        <div class="arch-card arch-card--2">
+          <div class="arch-card__label">Agent 2 Prompt</div>
+          <p style="font-size:.82rem; color:var(--text-muted); font-family:'Fira Code',monospace; line-height:1.7;">
+            "You are a world-class management consultant. Given the classified context, generate an
+            executive summary, 3-5 specific recommendations, a phased roadmap (0-3m / 3-12m / 12m+),
+            measurable KPIs, and key risks. Format as Markdown."
+          </p>
+        </div>
+        <div class="arch-card arch-card--3">
+          <div class="arch-card__label">Agent 3 Prompt</div>
+          <p style="font-size:.82rem; color:var(--text-muted); font-family:'Fira Code',monospace; line-height:1.7;">
+            "You are a senior executive editor. Validate the draft for completeness, sharpen language
+            for executive audiences, add a concrete 7-day action plan, and append a quality score
+            (X/10) with rationale. Return the refined document in Markdown."
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <p>
+      <strong>StratAI</strong> — AI Multi-Agent Business Advisor &nbsp;·&nbsp;
+      Built with Python · Flask · OpenAI · Vanilla JS
+    </p>
+    <p style="margin-top:.5rem; font-size:.78rem;">
+      Hackathon Demo &nbsp;·&nbsp; Modular three-agent pipeline architecture &nbsp;·&nbsp;
+      Works in demo mode without an API key
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
