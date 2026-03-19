@@ -142,13 +142,13 @@ async function runPipeline() {
     const totalMs = performance.now() - t0;
 
     // Agent 1 done
-    setStepState(0, 'done', `Done · ${data.timings.agent1}s`, '🔍');
+    setStepState(0, 'done', `Done · ${data.timings.agent1}s`);
 
     // ── Step 2: Agent 2 ────────────────────────────────────────────── //
-    setStepState(1, 'done', `Done · ${data.timings.agent2}s`, '⚙️');
+    setStepState(1, 'done', `Done · ${data.timings.agent2}s`);
 
     // ── Step 3: Agent 3 ────────────────────────────────────────────── //
-    setStepState(2, 'done', `Done · ${data.timings.agent3}s`, '✅');
+    setStepState(2, 'done', `Done · ${data.timings.agent3}s`);
 
     // ── Show context ───────────────────────────────────────────────── //
     renderContext(data.context);
@@ -166,7 +166,7 @@ async function runPipeline() {
   } finally {
     state.isLoading = false;
     els.submitBtn.disabled = false;
-    els.submitBtn.textContent = '🚀 Run Pipeline';
+    els.submitBtn.textContent = 'Run Pipeline';
   }
 }
 
@@ -226,7 +226,7 @@ function renderContext(ctx) {
 
 function renderResult(data) {
   els.resultScore.textContent = `Quality Score: ${data.quality_score}/10`;
-  els.resultMode.textContent = data.mode === 'live' ? '🟢 Live AI' : '🟡 Demo Mode';
+  els.resultMode.textContent = data.mode === 'live' ? 'Live AI' : 'Demo Mode';
   els.resultMode.className = `result-mode result-mode--${data.mode === 'live' ? 'live' : 'demo'}`;
   els.resultContent.innerHTML = MarkdownRenderer.render(data.final_output);
   els.resultPanel.classList.add('visible');
@@ -235,7 +235,7 @@ function renderResult(data) {
 
 function showError(msg) {
   els.resultPanel.classList.add('visible');
-  els.resultContent.innerHTML = `<p style="color:#ef4444">⚠️ <strong>Error:</strong> ${msg}</p>
+  els.resultContent.innerHTML = `<p style="color:#ef4444"><strong>Error:</strong> ${msg}</p>
     <p style="color:var(--text-muted)">Please check the backend server is running and try again.</p>`;
 }
 
@@ -253,7 +253,7 @@ els.copyBtn.addEventListener('click', () => {
   if (!state.result) return;
   navigator.clipboard.writeText(state.result.final_output).then(() => {
     const orig = els.copyBtn.textContent;
-    els.copyBtn.textContent = '✅ Copied!';
+    els.copyBtn.textContent = 'Copied';
     setTimeout(() => { els.copyBtn.textContent = orig; }, 2000);
   });
 });

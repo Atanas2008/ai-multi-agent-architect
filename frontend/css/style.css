@@ -30,6 +30,8 @@ body {
   color: var(--text);
   line-height: 1.65;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ── Typography ─────────────────────────────────────────────────────────── */
@@ -37,6 +39,8 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+::selection { background: rgba(99,102,241,.3); color: var(--text); }
 
 code, pre { font-family: 'Fira Code', 'Cascadia Code', monospace; }
 
@@ -75,8 +79,8 @@ code, pre { font-family: 'Fira Code', 'Cascadia Code', monospace; }
   width: 34px; height: 34px; border-radius: 8px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   display: flex; align-items: center; justify-content: center;
-  font-size: 1rem;
 }
+.nav__logo-icon svg { display: block; }
 .nav__links { display: flex; gap: 2rem; font-size: .9rem; font-weight: 500; }
 .nav__links a { color: var(--text-muted); transition: color var(--transition); }
 .nav__links a:hover { color: var(--text); text-decoration: none; }
@@ -160,11 +164,12 @@ code, pre { font-family: 'Fira Code', 'Cascadia Code', monospace; }
 .arch-card__icon {
   width: 48px; height: 48px; border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem; margin-bottom: 1.1rem;
+  margin-bottom: 1.1rem;
 }
-.arch-card--1 .arch-card__icon { background: rgba(99,102,241,.2); }
-.arch-card--2 .arch-card__icon { background: rgba(139,92,246,.2); }
-.arch-card--3 .arch-card__icon { background: rgba(6,182,212,.2); }
+.arch-card__icon svg { display: block; }
+.arch-card--1 .arch-card__icon { background: rgba(99,102,241,.2); color: var(--accent); }
+.arch-card--2 .arch-card__icon { background: rgba(139,92,246,.2); color: var(--accent-2); }
+.arch-card--3 .arch-card__icon { background: rgba(6,182,212,.2); color: var(--accent-3); }
 .arch-card__label {
   font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
   color: var(--text-muted); margin-bottom: .35rem;
@@ -224,13 +229,14 @@ code, pre { font-family: 'Fira Code', 'Cascadia Code', monospace; }
 .step-card.error { border-color: #ef4444; }
 .step-icon {
   width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center; font-size: .9rem;
-  background: rgba(99,102,241,.15);
-  transition: background var(--transition);
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(99,102,241,.15); color: rgba(99,102,241,.75);
+  transition: background var(--transition), color var(--transition);
 }
-.step-card.done .step-icon { background: rgba(16,185,129,.2); }
-.step-card.error .step-icon { background: rgba(239,68,68,.2); }
-.step-card.active .step-icon { background: rgba(99,102,241,.3); animation: pulse 1.2s ease infinite; }
+.step-icon svg { display: block; }
+.step-card.done .step-icon { background: rgba(16,185,129,.2); color: var(--accent-4); }
+.step-card.error .step-icon { background: rgba(239,68,68,.2); color: #ef4444; }
+.step-card.active .step-icon { background: rgba(99,102,241,.3); color: var(--accent); animation: pulse 1.2s ease infinite; }
 .step-info__name { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--text-muted); }
 .step-info__title { font-size: .95rem; font-weight: 600; margin: 2px 0 4px; }
 .step-info__status { font-size: .78rem; color: var(--text-muted); }
@@ -244,7 +250,8 @@ code, pre { font-family: 'Fira Code', 'Cascadia Code', monospace; }
 /* ── Context Panel ──────────────────────────────────────────────────────── */
 .context-panel {
   display: none; background: var(--bg);
-  border: 1px solid var(--border); border-radius: var(--radius);
+  border: 1px solid var(--border); border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
   padding: 1.5rem; margin-bottom: 2rem;
 }
 .context-panel.visible { display: block; }
@@ -262,6 +269,7 @@ code, pre { font-family: 'Fira Code', 'Cascadia Code', monospace; }
 .result-panel {
   display: none;
   background: var(--bg); border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
   border-radius: var(--radius); padding: 2rem;
 }
 .result-panel.visible { display: block; }
